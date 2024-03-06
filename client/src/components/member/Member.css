@@ -1,0 +1,24 @@
+
+/* Member Card */
+.member-card-container{
+  padding: 15px;
+  border-radius: 16px;
+  border: var(--white) solid 1px;
+  align-items: start;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Member List */
+.member-list-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 25px;
+}
+
+.member-list-container h3{
+  padding-bottom: 15px;
+}
