@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import MemberCard from './MemberCard';
 
 const MemberList = () => {
-  const memberApi = require('../../middleware/members');
+  const memberApi = require('../../controllers/members');
   
   const [members, setMembers] = useState([]);
   useEffect(() => {

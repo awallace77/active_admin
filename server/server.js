@@ -5,10 +5,20 @@ const pool = require('./db');
 const Member = require('../models/member.model');
 const CRUD = require('./crud');
 const PORT = 5000;
+const CLIENT_PORT = 3000;
+const URL = `http://localhost:${CLIENT_PORT}`
+const authRouter = require('./routers/authRouter')
+
 
 //middleware
-app.use(cors());
+app.use(cors({
+  origin: URL,
+  credentials: true
+}));
 app.use(express.json()); // gives us access to request.body to get json data
+
+/* Authentication */
+app.use("/auth", authRouter);
 
 /* Routes */
 /* Create a new user */
